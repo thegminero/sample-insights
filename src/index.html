@@ -17,18 +17,12 @@
   <div id="container" class="flex flex-wrap w-full"> 
     
     <div id="side-panel" class="w-2/12">
+
       <div class="p-4 my-2 shadow-md">
-        <span class="p-4 my-2">Type</span>
-        <div id="bodyType"></div>
+        <span class="p-4 my-2">Category</span>
+        <div id="category"></div>
       </div>
-      <div class="p-4 my-2 shadow-md">
-        <span class="p-4 my-2">Make</span>
-        <div id="carMake"></div>
-      </div>
-      <div class="p-4 my-2 shadow-md">
-        <span class="p-4 my-2">Model</span>
-        <div id="carModel"></div>
-      </div>
+
     </div>
     <div id="center-panel" class="flex w-10/12"> 
       <div id="hits"></div>
@@ -165,20 +159,11 @@
               }
       }), 
       instantsearch.widgets.refinementList({
-        container:"#bodyType",
-        attribute: 'attributes.brand_name', 
+        container:"#category",
+        attribute: 'attributes.categories', 
         searchable: true
       }),
-      instantsearch.widgets.refinementList({
-        container:"#carMake",
-        attribute: 'attributes.activity', 
-        searchable: true
-      }),
-      instantsearch.widgets.refinementList({
-        container:"#carModel",
-        attribute: 'attributes.age', 
-        searchable: true
-      }),
+      
       instantsearch.widgets.pagination({
         container: '#pagination',
       })
